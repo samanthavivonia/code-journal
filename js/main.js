@@ -18,10 +18,8 @@ $form.addEventListener('submit', function (event) {
     title: $title.value,
     photoURL: $photoURL.value,
     notes: $notes.value,
-    nextEntryID: 0
+    entryId: data.nextEntryId++
   };
-  // console.log(newEntry);
-  newEntry.nextEntryID = newEntry.nextEntryID++;
   data.entries.unshift(newEntry);
   $imgPreview.setAttribute('src', 'images/placeholder-image-square.jpg');
   $form.reset();
