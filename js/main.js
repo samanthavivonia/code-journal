@@ -23,6 +23,10 @@ $form.addEventListener('submit', function (event) {
   data.entries.unshift(newEntry);
   $imgPreview.setAttribute('src', 'images/placeholder-image-square.jpg');
   $form.reset();
+
+  $viewEntries.classList.remove('hidden');
+  $viewEntryForm.classList.add('hidden');
+  location.reload();
 });
 
 // CREATE ENTRY DOM TREE
@@ -63,4 +67,20 @@ window.addEventListener('DOMContentLoaded', function () {
   for (var i = 0; i < data.entries.length; i++) {
     $entriesList.appendChild(renderNewEntry(data.entries[i]));
   }
+});
+
+const $viewEntries = document.querySelector('[data-view="entries"]');
+
+const $viewEntryForm = document.querySelector('[data-view="entry-form"]');
+
+const $navEntries = document.querySelector('.nav-item');
+$navEntries.addEventListener('click', function () {
+  $viewEntries.classList.remove('hidden');
+  $viewEntryForm.classList.add('hidden');
+});
+
+const $createButton = document.querySelector('.create-button');
+$createButton.addEventListener('click', function () {
+  $viewEntries.classList.add('hidden');
+  $viewEntryForm.classList.remove('hidden');
 });

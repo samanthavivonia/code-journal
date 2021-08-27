@@ -22,8 +22,14 @@
 <body>
   <header>
     <div class="container">
-      <div class="column-full">
-        Code Journal
+      <div class="row">
+        <div class="site-title">
+          Code Journal
+        </div>
+        <div class="nav-item">
+          Entries
+        </div>
+
       </div>
     </div>
   </header>
@@ -31,7 +37,7 @@
 
     <!-- ENTRY FORM -->
 
-    <div data-view="entry-form" class="container">
+    <div data-view="entry-form" class="container hidden">
 
       <h1 class="column-full form-item">New Entry</h1>
 
@@ -75,7 +81,11 @@
 
     <div data-view="entries" class="container">
 
-      <h1 class="column-full form-item">Entries</h1>
+      <div class="row entries-header">
+        <h1 class="">Entries</h1>
+        <button class="create-button">Create New</button>
+      </div>
+
 
       <ul>
 
