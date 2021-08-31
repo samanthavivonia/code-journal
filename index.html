@@ -22,13 +22,22 @@
 <body>
   <header>
     <div class="container">
-      <div class="column-full">
-        Code Journal
+      <div class="row">
+        <div class="site-title">
+          Code Journal
+        </div>
+        <div class="nav-item">
+          Entries List
+        </div>
+
       </div>
     </div>
   </header>
   <main>
-    <div data-view="entry-form" class="container">
+
+    <!-- ENTRY FORM -->
+
+    <div data-view="entry-form" class="container hidden">
 
       <h1 class="column-full form-item">New Entry</h1>
 
@@ -67,6 +76,25 @@
 
       </form>
     </div>
+
+    <!-- ENTRIES -->
+
+    <div data-view="entries" class="container">
+
+      <div class="row entries-header">
+        <h1 class="">Entries</h1>
+        <button class="create-button">Create New</button>
+      </div>
+
+
+      <ul>
+
+        <!-- DOM TREE APPENDED HERE -->
+
+      </ul>
+
+    </div>
+
   </main>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
