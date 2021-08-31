@@ -26,7 +26,11 @@ $form.addEventListener('submit', function (event) {
 
   $viewEntries.classList.remove('hidden');
   $viewEntryForm.classList.add('hidden');
-  location.reload();
+
+  $entriesList.innerHTML = '';
+  for (var i = 0; i < data.entries.length; i++) {
+    $entriesList.appendChild(renderNewEntry(data.entries[i]));
+  }
 });
 
 // CREATE ENTRY DOM TREE
