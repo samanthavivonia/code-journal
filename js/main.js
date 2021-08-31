@@ -54,9 +54,18 @@ function renderNewEntry(entry) {
   $textDivWrapper.setAttribute('class', 'column-half');
   $entry.appendChild($textDivWrapper);
 
+  var $entryHeader = document.createElement('div');
+  $entryHeader.setAttribute('class', 'row entry-header');
+  $textDivWrapper.appendChild($entryHeader);
+
   var $entryTitle = document.createElement('h2');
   $entryTitle.textContent = entry.title;
-  $textDivWrapper.appendChild($entryTitle);
+  $entryHeader.appendChild($entryTitle);
+
+  var $editIcon = document.createElement('i');
+  $editIcon.setAttribute('class', 'fas fa-pen');
+  $editIcon.setAttribute('data-entry-id', entry.entryId);
+  $entryHeader.appendChild($editIcon);
 
   var $entryDesc = document.createElement('p');
   $entryDesc.textContent = entry.notes;
@@ -87,4 +96,14 @@ const $createButton = document.querySelector('.create-button');
 $createButton.addEventListener('click', function () {
   $viewEntries.classList.add('hidden');
   $viewEntryForm.classList.remove('hidden');
+});
+
+$entriesList.addEventListener('click', function () {
+  const $editIcons = document.querySelectorAll('i');
+  for (var i = 0; i < $editIcons.length; i++) {
+    if (event.target.getAttribute('data-entry-id') === $editIcons[i].getAttribute('data-entry-id')) {
+      $viewEntries.classList.add('hidden');
+      $viewEntryForm.classList.remove('hidden');
+    }
+  }
 });
