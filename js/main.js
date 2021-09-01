@@ -104,6 +104,16 @@ $entriesList.addEventListener('click', function () {
     if (event.target.getAttribute('data-entry-id') === $editIcons[i].getAttribute('data-entry-id')) {
       $viewEntries.classList.add('hidden');
       $viewEntryForm.classList.remove('hidden');
+      for (var j = 0; j < data.entries.length; j++) {
+        if (parseInt(event.target.getAttribute('data-entry-id')) === data.entries[j].entryId) {
+          data.editing = data.entries[j];
+          $title.value = data.entries[j].title;
+          $photoURL.value = data.entries[j].photoURL;
+          $notes.value = data.entries[j].notes;
+          $imgPreview.setAttribute('src', $photoURL.value);
+        }
+      }
+
     }
   }
 });
