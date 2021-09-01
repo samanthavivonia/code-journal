@@ -71,6 +71,7 @@ textarea:focus {
 button,
 input[type="submit"] {
   font-family: 'Urbanist', sans-serif;
+  font-weight: 500;
   text-transform: uppercase;
   background-color: #562b80;
   color: white;
@@ -79,6 +80,7 @@ input[type="submit"] {
   height: fit-content;
   border: none;
   padding: 0.5em 1.5em;
+  cursor: pointer;
 }
 
 button:hover,
@@ -117,5 +119,73 @@ i {
 }
 
 i:hover {
+  color: #391c57;
+}
+
+.form-buttons {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.75rem;
+}
+
+.delete-hyperlink {
+  color: rgb(221, 0, 0);
+  margin: 0 0 2em 0;
+  cursor: pointer;
+}
+
+.delete-hyperlink:hover {
+  text-decoration: underline;
+}
+
+.overlay {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.delete-modal {
+  background-color: white;
+  padding: 2em 2em 1em 2em;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-modal p {
+  margin-bottom: 2em;
+}
+
+.delete-button,
+.cancel-button {
+  width: 100%;
+}
+
+.delete-button {
+  background-color: rgb(221, 0, 0);
+}
+
+.delete-button:hover {
+  background-color: rgb(192, 0, 0);
+}
+
+.cancel-button {
+  background-color: white;
+  color: #562b80;
+}
+
+.cancel-button:hover {
+  background-color: rgb(241, 241, 241);
   color: #391c57;
 }

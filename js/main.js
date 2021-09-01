@@ -143,3 +143,16 @@ $entriesList.addEventListener('click', function () {
     }
   }
 });
+
+const $overlay = document.querySelector('.overlay');
+const $delete = document.querySelector('.delete-hyperlink');
+$delete.addEventListener('click', function () {
+  $overlay.classList.remove('hidden');
+});
+
+// const $deleteButton = document.querySelector('.delete-button');
+const $cancelButton = document.querySelector('.cancel-button');
+
+$cancelButton.addEventListener('click', function () {
+  $overlay.classList.add('hidden');
+});
