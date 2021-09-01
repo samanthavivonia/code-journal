@@ -23,6 +23,7 @@ header {
 
 .nav-item {
   text-align: right;
+  cursor: pointer;
 }
 
 .nav-item:hover {
@@ -103,4 +104,18 @@ ul {
   align-items: center;
   justify-content: space-between;
   padding: 0 0.75rem;
+}
+
+.entry-header {
+  justify-content: space-between;
+  align-items: center;
+}
+
+i {
+  color: #562b80;
+  cursor: pointer;
+}
+
+i:hover {
+  color: #391c57;
 }
