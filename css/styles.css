@@ -46,6 +46,7 @@ img {
 
 input,
 textarea {
+  font-family: 'Urbanist', sans-serif;
   height: 2.5em;
   display: block;
   width: 100%;
@@ -60,12 +61,18 @@ input {
 
 textarea {
   height: 10em;
+  resize: none;
 }
 
 input:focus,
 textarea:focus {
   outline: none;
   border: #562b80 solid 2px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: 'Urbanist', sans-serif;
 }
 
 button,
